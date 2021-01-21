@@ -51,7 +51,7 @@ weight_t distance(const WeightedGraph<weight_t> &g, size_t start, size_t end) {
 			continue;
 		processed.insert(u);
 		if (dist[u] == INFTY)
-			continue;
+			break;
 		for (const auto & e : g.edges(u)) { // e ~ {vertex v, weight of u->v}
 			size_t v = e.first;
 			weight_t weight_uv = e.second;
